@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://kit.fontawesome.com/319934a398.js" crossorigin="anonymous"></script>
+  <title>Portfolio</title>
+  <meta name="title" content="Portfolio">
+  <meta name="description" content="Personal Portfolio">
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <section id="navigation">
+      <div class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+    </section>
+    <div id="nav-content">
+      <div class="close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+      <div class="wrapper">
+        <h2 class="section-heading"></h2>
+        <nav>
+          <ul>
+            <li><a data-text="Home" href="./index.html#hero">Home</a></li>
+            <li><a data-text="About" href="./index.html#about">About</a></li>
+            <li><a data-text="Projects" href="./index.html#projects">Projects</a></li>
+            <li><a data-text="Contact" href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- End NavBar Section -->
+
+
+<!-- Contact Sectrion -->
+
+
+
+<section class="contact">
+<div class="container">
+  <h2 class="section-heading" data-outline="contact">Get in touch with me</h2>
+  <form action="">
+
+    <label for="name">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Name">
+
+    <label for="Email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Email">
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
+
+    <input type="submit" value="Send">
+
+  </form>
+</div>
+</section>
+  <!-- <div class="input-group">
+    <form onsubmit="sendEmail(); reset(); return false;">
+      <h2>Get In Touch With Me</h2>
+    <input type="hidden" name="subject" value="New Submission!">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    <textarea id="message" rows="5" placeholder="Message"></textarea>
+    <button type="submit">Submit</button>
+    </form>
+  </div> -->
+
+<!-- End Contact Section -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>General</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Other</h4>
+        <ul>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Resume</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find Me On</h4>
+        <div class="social-links">
+          <a href="https://github.com/Zac-html"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/zachary-iles-472002228/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/Zac_html"><i class="fa-brands fa-twitter"></i></a>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+  
+
+  <script src="src/script.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+      Email.send({
+    Host : "smtp.gmail.com",
+    Username : "zacharyiles97@gmail.com",
+    Password : "3C9FCF5995F14AC81F0D04CCB6225C9F33D9",
+    To : 'zacharyiles97@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact Form Inquiry",
+    Body : "Name: " + document.getElementById("name").value
+    + "<br> Email: " + document.getElementById("email").value
+    + "<br> Message: " + document.getElementById("message").value
+}).then(
+  message => alert("Message Sent Successfully")
+);
+    }
+  </script>
+</body>
+</html>
